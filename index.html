@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CAFE NOIR - こだわりのコーヒーと上質な空間を楽しむカフェ。">
-    <title>CAFE NOIR | Premium Coffee Experience</title>
+    <meta name="description" content="LUMIÈRE SALON - あなたらしい美しさを引き出すヘアサロン。">
+    <title>LUMIÈRE SALON | Hair & Beauty</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -13,14 +13,20 @@
 
     <!-- ヘッダー -->
     <header class="header" id="header">
-        <a href="#home" class="logo">CAFE<span> NOIR</span></a>
+
+        <a href="#home" class="logo">
+            LUMIÈRE
+            <span>HAIR & BEAUTY SALON</span>
+        </a>
 
         <nav class="nav" id="nav">
             <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
+            <a href="#concept">CONCEPT</a>
             <a href="#menu">MENU</a>
-            <a href="#gallery">GALLERY</a>
+            <a href="#style">STYLE</a>
+            <a href="#staff">STAFF</a>
             <a href="#access">ACCESS</a>
+            <a href="#reservation" class="nav-reserve">RESERVATION</a>
         </nav>
 
         <button class="menu-toggle" id="menuToggle"
@@ -31,150 +37,364 @@
             <span></span>
             <span></span>
         </button>
+
     </header>
 
     <main>
 
         <!-- メインビジュアル -->
         <section class="hero" id="home">
+
             <div class="hero-overlay"></div>
 
             <div class="hero-content">
-                <p class="eyebrow">EST. 2026 — PREMIUM COFFEE</p>
 
-                <h1>Beyond<br>Ordinary Coffee.</h1>
+                <p class="eyebrow">LUMIÈRE HAIR & BEAUTY</p>
+
+                <h1>
+                    Beauty in<br>
+                    Your Own Way.
+                </h1>
 
                 <p class="hero-description">
-                    日常を忘れる、特別な一杯。<br>
-                    上質な空間で、心ほどけるひとときを。
+                    あなたらしい美しさを、もっと。<br>
+                    日常に、少しだけ特別な時間を。
                 </p>
 
-                <a href="#menu" class="btn">EXPLORE MENU</a>
+                <a href="#reservation" class="btn btn-primary">
+                    RESERVATION →
+                </a>
+
             </div>
 
-            <a href="#about" class="scroll-indicator">
+            <a href="#concept" class="scroll-indicator">
                 SCROLL DOWN
                 <span></span>
             </a>
+
         </section>
 
-        <!-- 店舗紹介 -->
-        <section class="about section" id="about">
+        <!-- コンセプト -->
+        <section class="concept section" id="concept">
 
-            <div class="about-image reveal">
-                <img src="images/about.jpg" alt="コーヒーを淹れる様子" loading="lazy">
+            <div class="concept-image reveal">
+                <img src="images/concept.jpg"
+                    alt="明るく上質なサロンの店内"
+                    loading="lazy">
             </div>
 
-            <div class="about-content reveal">
-                <p class="eyebrow">OUR STORY</p>
+            <div class="concept-content reveal">
 
-                <h2>Crafted with<br>Passion.</h2>
+                <p class="eyebrow">OUR CONCEPT</p>
 
-                <p>
-                    厳選されたコーヒー豆と、丁寧なハンドドリップ。
-                    一杯一杯にこだわりを込めています。
+                <h2>
+                    Discover<br>
+                    Your Beauty.
+                </h2>
+
+                <p class="japanese-heading">
+                    あなたらしさを、大切に。
                 </p>
 
                 <p>
-                    落ち着いた空間と豊かな香りに包まれながら、
-                    あなただけの特別な時間をお過ごしください。
+                    LUMIÈRE SALONは、一人ひとりの個性と
+                    ライフスタイルに寄り添うヘアサロンです。
                 </p>
 
-                <a href="#access" class="text-link">
-                    VISIT OUR CAFE →
+                <p>
+                    丁寧なカウンセリングと確かな技術で、
+                    あなたの魅力を最大限に引き出します。
+                    心地よい空間で、特別なひとときを
+                    お過ごしください。
+                </p>
+
+                <a href="#menu" class="text-link">
+                    VIEW OUR MENU →
                 </a>
+
             </div>
 
         </section>
 
-        <!-- メニュー -->
+        <!-- 施術メニュー -->
         <section class="menu-section section" id="menu">
 
             <div class="section-heading reveal">
-                <p class="eyebrow">SIGNATURE SELECTION</p>
-                <h2>Our Menu</h2>
-                <p>厳選された、こだわりのメニュー。</p>
+                <p class="eyebrow">OUR SERVICES</p>
+                <h2>Menu & Price</h2>
+                <p>施術メニュー・料金</p>
             </div>
 
             <div class="menu-grid">
 
+                <!-- カット -->
                 <article class="menu-card reveal">
-                    <img src="images/espresso.jpg" alt="エスプレッソ" loading="lazy">
-                    <div class="menu-info">
-                        <p class="category">COFFEE</p>
-                        <h3>Espresso</h3>
-                        <p>深いコクと豊かな香り。</p>
-                        <span class="price">¥450</span>
+
+                    <span class="menu-number">01</span>
+
+                    <h3>Cut</h3>
+                    <p class="menu-subtitle">カット</p>
+
+                    <div class="price-row">
+                        <span>デザインカット</span>
+                        <strong>¥5,500</strong>
                     </div>
+
+                    <div class="price-row">
+                        <span>メンズカット</span>
+                        <strong>¥4,950</strong>
+                    </div>
+
+                    <div class="price-row">
+                        <span>前髪カット</span>
+                        <strong>¥1,100</strong>
+                    </div>
+
                 </article>
 
+                <!-- カラー -->
                 <article class="menu-card reveal">
-                    <img src="images/latte.jpg" alt="カフェラテ" loading="lazy">
-                    <div class="menu-info">
-                        <p class="category">COFFEE</p>
-                        <h3>Cafe Latte</h3>
-                        <p>なめらかなミルクとエスプレッソ。</p>
-                        <span class="price">¥580</span>
+
+                    <span class="menu-number">02</span>
+
+                    <h3>Color</h3>
+                    <p class="menu-subtitle">カラー</p>
+
+                    <div class="price-row">
+                        <span>フルカラー</span>
+                        <strong>¥7,700</strong>
                     </div>
+
+                    <div class="price-row">
+                        <span>リタッチカラー</span>
+                        <strong>¥5,500</strong>
+                    </div>
+
+                    <div class="price-row">
+                        <span>ダブルカラー</span>
+                        <strong>¥15,400</strong>
+                    </div>
+
                 </article>
 
+                <!-- パーマ -->
                 <article class="menu-card reveal">
-                    <img src="images/cappuccino.jpg" alt="カプチーノ" loading="lazy">
-                    <div class="menu-info">
-                        <p class="category">COFFEE</p>
-                        <h3>Cappuccino</h3>
-                        <p>ふんわりとしたミルクフォーム。</p>
-                        <span class="price">¥600</span>
+
+                    <span class="menu-number">03</span>
+
+                    <h3>Perm</h3>
+                    <p class="menu-subtitle">パーマ</p>
+
+                    <div class="price-row">
+                        <span>デザインパーマ</span>
+                        <strong>¥8,800</strong>
                     </div>
+
+                    <div class="price-row">
+                        <span>デジタルパーマ</span>
+                        <strong>¥13,200</strong>
+                    </div>
+
+                    <div class="price-row">
+                        <span>縮毛矯正</span>
+                        <strong>¥16,500</strong>
+                    </div>
+
                 </article>
 
+                <!-- トリートメント -->
                 <article class="menu-card reveal">
-                    <img src="images/cheesecake.jpg" alt="チーズケーキ" loading="lazy">
-                    <div class="menu-info">
-                        <p class="category">DESSERT</p>
-                        <h3>Cheesecake</h3>
-                        <p>濃厚で上品な味わい。</p>
-                        <span class="price">¥650</span>
-                    </div>
-                </article>
 
-                <article class="menu-card reveal">
-                    <img src="images/croissant.jpg" alt="クロワッサン" loading="lazy">
-                    <div class="menu-info">
-                        <p class="category">FOOD</p>
-                        <h3>Croissant</h3>
-                        <p>香ばしく、サクサクの食感。</p>
-                        <span class="price">¥420</span>
-                    </div>
-                </article>
+                    <span class="menu-number">04</span>
 
-                <article class="menu-card reveal">
-                    <img src="images/matcha.jpg" alt="抹茶ラテ" loading="lazy">
-                    <div class="menu-info">
-                        <p class="category">DRINK</p>
-                        <h3>Matcha Latte</h3>
-                        <p>上質な抹茶とミルクの調和。</p>
-                        <span class="price">¥620</span>
+                    <h3>Treatment</h3>
+                    <p class="menu-subtitle">ヘアケア</p>
+
+                    <div class="price-row">
+                        <span>トリートメント</span>
+                        <strong>¥4,400</strong>
                     </div>
+
+                    <div class="price-row">
+                        <span>ヘッドスパ</span>
+                        <strong>¥5,500</strong>
+                    </div>
+
+                    <div class="price-row">
+                        <span>髪質改善ケア</span>
+                        <strong>¥9,900</strong>
+                    </div>
+
                 </article>
 
             </div>
+
+            <p class="menu-note">
+                ※表示価格はすべて税込です。
+                髪の長さや施術内容により料金が異なる場合があります。
+            </p>
+
         </section>
 
-        <!-- ギャラリー -->
-        <section class="gallery section" id="gallery">
+        <!-- ヘアスタイルギャラリー -->
+        <section class="style-section section" id="style">
 
             <div class="section-heading reveal">
-                <p class="eyebrow">THE ATMOSPHERE</p>
-                <h2>Gallery</h2>
-                <p>日常から少し離れた、心地よい空間。</p>
+
+                <p class="eyebrow">HAIR COLLECTION</p>
+                <h2>Style Gallery</h2>
+                <p>あなたに似合う、新しいスタイル。</p>
+
             </div>
 
-            <div class="gallery-grid reveal">
-                <img src="images/gallery1.jpg" alt="カフェの店内" loading="lazy">
-                <img src="images/gallery2.jpg" alt="コーヒーカップ" loading="lazy">
-                <img src="images/gallery3.jpg" alt="カフェの座席" loading="lazy">
-                <img src="images/gallery4.jpg" alt="コーヒー豆" loading="lazy">
+            <!-- スタイル絞り込み -->
+            <div class="style-filters">
+
+                <button class="filter-btn active"
+                    data-filter="all">ALL</button>
+
+                <button class="filter-btn"
+                    data-filter="short">SHORT</button>
+
+                <button class="filter-btn"
+                    data-filter="medium">MEDIUM</button>
+
+                <button class="filter-btn"
+                    data-filter="long">LONG</button>
+
+                <button class="filter-btn"
+                    data-filter="mens">MEN'S</button>
+
+            </div>
+
+            <div class="style-grid">
+
+                <article class="style-card reveal" data-category="short">
+                    <img src="images/style1.jpg"
+                        alt="ナチュラルショートヘア"
+                        loading="lazy">
+                    <div class="style-info">
+                        <span>SHORT</span>
+                        <h3>Natural Short</h3>
+                    </div>
+                </article>
+
+                <article class="style-card reveal" data-category="medium">
+                    <img src="images/style2.jpg"
+                        alt="エレガントなボブヘア"
+                        loading="lazy">
+                    <div class="style-info">
+                        <span>MEDIUM</span>
+                        <h3>Elegant Bob</h3>
+                    </div>
+                </article>
+
+                <article class="style-card reveal" data-category="long">
+                    <img src="images/style3.jpg"
+                        alt="柔らかなロングウェーブ"
+                        loading="lazy">
+                    <div class="style-info">
+                        <span>LONG</span>
+                        <h3>Soft Wave</h3>
+                    </div>
+                </article>
+
+                <article class="style-card reveal" data-category="medium">
+                    <img src="images/style4.jpg"
+                        alt="レイヤーカット"
+                        loading="lazy">
+                    <div class="style-info">
+                        <span>MEDIUM</span>
+                        <h3>Layered Style</h3>
+                    </div>
+                </article>
+
+                <article class="style-card reveal" data-category="long">
+                    <img src="images/style5.jpg"
+                        alt="ストレートロングヘア"
+                        loading="lazy">
+                    <div class="style-info">
+                        <span>LONG</span>
+                        <h3>Silky Straight</h3>
+                    </div>
+                </article>
+
+                <article class="style-card reveal" data-category="mens">
+                    <img src="images/style6.jpg"
+                        alt="メンズヘアスタイル"
+                        loading="lazy">
+                    <div class="style-info">
+                        <span>MEN'S</span>
+                        <h3>Modern Men's</h3>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- スタッフ紹介 -->
+        <section class="staff-section section" id="staff">
+
+            <div class="section-heading reveal">
+                <p class="eyebrow">MEET OUR TEAM</p>
+                <h2>Our Stylists</h2>
+                <p>あなたの美しさをサポートします。</p>
+            </div>
+
+            <div class="staff-grid">
+
+                <article class="staff-card reveal">
+
+                    <img src="images/staff1.jpg"
+                        alt="スタイリストのユイ"
+                        loading="lazy">
+
+                    <div class="staff-info">
+                        <span>DIRECTOR</span>
+                        <h3>YUI</h3>
+                        <p>
+                            丁寧なカウンセリングで、
+                            あなたに似合うスタイルをご提案します。
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="staff-card reveal">
+
+                    <img src="images/staff2.jpg"
+                        alt="スタイリストのハルカ"
+                        loading="lazy">
+
+                    <div class="staff-info">
+                        <span>TOP STYLIST</span>
+                        <h3>HARUKA</h3>
+                        <p>
+                            透明感のあるカラーと、
+                            柔らかなヘアデザインが得意です。
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="staff-card reveal">
+
+                    <img src="images/staff3.jpg"
+                        alt="スタイリストのレン"
+                        loading="lazy">
+
+                    <div class="staff-info">
+                        <span>STYLIST</span>
+                        <h3>REN</h3>
+                        <p>
+                            再現性を大切にしたカットで、
+                            毎日のスタイリングをサポートします。
+                        </p>
+                    </div>
+
+                </article>
+
             </div>
 
         </section>
@@ -183,28 +403,74 @@
         <section class="access section" id="access">
 
             <div class="section-heading reveal">
-                <p class="eyebrow">FIND US</p>
-                <h2>Visit Our Cafe</h2>
+                <p class="eyebrow">VISIT US</p>
+                <h2>Access</h2>
+                <p>店舗情報・アクセス</p>
             </div>
 
             <div class="access-grid">
 
-                <div class="access-card reveal">
-                    <h3>LOCATION</h3>
-                    <p>東京都〇〇区〇〇 1-2-3</p>
+                <div class="access-image reveal">
+                    <img src="images/access.jpg"
+                        alt="サロンの内装"
+                        loading="lazy">
                 </div>
 
-                <div class="access-card reveal">
-                    <h3>OPENING HOURS</h3>
-                    <p>平日 10:00 - 20:00</p>
-                    <p>土日 09:00 - 21:00</p>
+                <div class="access-info reveal">
+
+                    <h3>LUMIÈRE SALON</h3>
+
+                    <dl class="access-details">
+
+                        <dt>ADDRESS</dt>
+                        <dd>東京都〇〇区〇〇 1-2-3</dd>
+
+                        <dt>OPENING HOURS</dt>
+                        <dd>平日 10:00 - 20:00</dd>
+                        <dd>土日祝 09:00 - 19:00</dd>
+
+                        <dt>CLOSED</dt>
+                        <dd>毎週火曜日</dd>
+
+                        <dt>TEL</dt>
+                        <dd>03-XXXX-XXXX</dd>
+
+                        <dt>ACCESS</dt>
+                        <dd>〇〇駅から徒歩5分</dd>
+
+                    </dl>
+
                 </div>
 
-                <div class="access-card reveal">
-                    <h3>CONTACT</h3>
-                    <p>03-XXXX-XXXX</p>
-                    <p>contact@example.com</p>
-                </div>
+            </div>
+
+        </section>
+
+        <!-- 予約案内 -->
+        <section class="reservation" id="reservation">
+
+            <div class="reservation-content reveal">
+
+                <p class="eyebrow">BOOK YOUR APPOINTMENT</p>
+
+                <h2>Your Beauty<br>Starts Here.</h2>
+
+                <p>
+                    あなただけの特別な時間を。<br>
+                    ご来店を心よりお待ちしております。
+                </p>
+
+                <!-- 公開時に実際の予約URLへ変更してください -->
+                <a href="https://example.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    WEB予約はこちら →
+                </a>
+
+                <p class="reservation-note">
+                    ※サンプルサイトのため、実際の予約はできません。
+                </p>
 
             </div>
 
@@ -214,24 +480,34 @@
 
     <!-- フッター -->
     <footer class="footer">
-        <a href="#home" class="logo">CAFE<span> NOIR</span></a>
 
-        <p>Experience the art of coffee.</p>
+        <a href="#home" class="logo">
+            LUMIÈRE
+            <span>HAIR & BEAUTY SALON</span>
+        </a>
 
-        <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <p>Beauty in Your Own Way.</p>
+
+        <nav class="footer-nav"
+            aria-label="フッターナビゲーション">
             <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
+            <a href="#concept">CONCEPT</a>
             <a href="#menu">MENU</a>
+            <a href="#style">STYLE</a>
+            <a href="#staff">STAFF</a>
             <a href="#access">ACCESS</a>
         </nav>
 
         <p class="copyright">
-            &copy; <span id="year">2026</span> CAFE NOIR. All Rights Reserved.
+            &copy; <span id="year">2026</span>
+            LUMIÈRE SALON. All Rights Reserved.
         </p>
+
     </footer>
 
-    <!-- ページ上部に戻るボタン -->
-    <button class="back-to-top" id="backToTop"
+    <!-- ページ上部へ戻るボタン -->
+    <button class="back-to-top"
+        id="backToTop"
         aria-label="ページ上部へ戻る">
         ↑
     </button>
@@ -239,8 +515,12 @@
 <!-- プレビュー専用バナー -->
 <div class="preview-banner">
     <span>PREVIEW VERSION</span>
-    <p>CAFE NOIR — Website Template</p>
-    <a href="https://koma-studio.booth.pm/items/9227009"
+
+    <p>LUMIÈRE SALON</p>
+
+    <small>Produced by KOMA STUDIO</small>
+
+    <a href="https://koma-studio.booth.pm/"
        target="_blank"
        rel="noopener noreferrer">
         テンプレートを購入 →

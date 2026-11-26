@@ -1,22 +1,34 @@
 
-/* ==============================
-   CAFE NOIR - JavaScript
-   ============================== */
+/* =================================
+   LUMIÈRE SALON
+   JavaScript
+   Produced by KOMA STUDIO
+   ================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const header = document.getElementById("header");
-    const menuToggle = document.getElementById("menuToggle");
     const nav = document.getElementById("nav");
+    const menuToggle = document.getElementById("menuToggle");
     const backToTop = document.getElementById("backToTop");
     const year = document.getElementById("year");
 
-    // スマホ用メニュー
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    );
+
+    /* =================================
+       スマートフォン用メニュー
+       ================================= */
+
     function closeMenu() {
+
         nav.classList.remove("active");
         menuToggle.classList.remove("active");
+
         menuToggle.setAttribute("aria-expanded", "false");
         menuToggle.setAttribute("aria-label", "メニューを開く");
+
     }
 
     menuToggle.addEventListener("click", () => {
@@ -25,7 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         menuToggle.classList.toggle("active", isOpen);
 
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
 
         menuToggle.setAttribute(
             "aria-label",
@@ -34,44 +49,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    // リンク選択時にメニューを閉じる
     nav.querySelectorAll("a").forEach(link => {
+
         link.addEventListener("click", closeMenu);
+
     });
 
-    // Escapeキーでメニューを閉じる
+    document.addEventListener("click", event => {
+
+        if (!header.contains(event.target)) {
+            closeMenu();
+        }
+
+    });
+
     document.addEventListener("keydown", event => {
+
         if (
             event.key === "Escape" &&
             nav.classList.contains("active")
         ) {
+
             closeMenu();
             menuToggle.focus();
+
         }
+
     });
 
-    // メニューの外側をクリックした場合
-    document.addEventListener("click", event => {
-        if (!header.contains(event.target)) {
-            closeMenu();
-        }
-    });
-
-    // PC表示に切り替わった場合
     window.addEventListener("resize", () => {
-        if (window.innerWidth > 768) {
+
+        if (window.innerWidth > 1100) {
             closeMenu();
         }
+
     });
 
-    // スクロール時のヘッダー・ボタン制御
+    /* =================================
+       スクロール時のヘッダー制御
+       ================================= */
+
     function updateScroll() {
 
         const scrollY = window.scrollY;
 
-        header.classList.toggle("scrolled", scrollY > 50);
+        header.classList.toggle(
+            "scrolled",
+            scrollY > 50
+        );
 
-        backToTop.classList.toggle("show", scrollY > 500);
+        backToTop.classList.toggle(
+            "show",
+            scrollY > 500
+        );
 
     }
 
@@ -81,26 +111,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateScroll();
 
-    // ページ上部に戻る
+    /* =================================
+       ページ上部へ戻る
+       ================================= */
+
     backToTop.addEventListener("click", () => {
 
         window.scrollTo({
             top: 0,
-            behavior: window.matchMedia(
-                "(prefers-reduced-motion: reduce)"
-            ).matches ? "instant" : "smooth"
+            behavior: reducedMotion.matches
+                ? "instant"
+                : "smooth"
         });
 
     });
 
-    // スクロールアニメーション
+    /* =================================
+       スクロールアニメーション
+       ================================= */
+
     const revealElements = document.querySelectorAll(".reveal");
 
     if (
         "IntersectionObserver" in window &&
-        !window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches
+        !reducedMotion.matches
     ) {
 
         document.documentElement.classList.add("js-enabled");
@@ -124,16 +158,105 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         revealElements.forEach(element => {
+
             observer.observe(element);
+
         });
 
     }
 
-    // コピーライトの年号を自動更新
+    /* =================================
+       ヘアスタイル絞り込み
+       ================================= */
+
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const styleCards = document.querySelectorAll(".style-card");
+
+    filterButtons.forEach(button => {
+
+        button.setAttribute(
+            "aria-pressed",
+            String(button.classList.contains("active"))
+        );
+
+        button.addEventListener("click", () => {
+
+            const selectedCategory = button.dataset.filter;
+
+            // 選択中のボタンを変更
+            filterButtons.forEach(btn => {
+
+                btn.classList.remove("active");
+
+                btn.setAttribute("aria-pressed", "false");
+
+            });
+
+            button.classList.add("active");
+
+            button.setAttribute("aria-pressed", "true");
+
+            // カテゴリーに応じて表示を切り替える
+            styleCards.forEach(card => {
+
+                const category = card.dataset.category;
+
+                const shouldShow =
+                    selectedCategory === "all" ||
+                    category === selectedCategory;
+
+                card.hidden = !shouldShow;
+
+                if (shouldShow) {
+
+                    card.classList.add("visible");
+
+                    if (
+                        !reducedMotion.matches &&
+                        typeof card.animate === "function"
+                    ) {
+
+                        card.getAnimations().forEach(animation => {
+                            animation.cancel();
+                        });
+
+                        card.animate(
+                            [
+                                {
+                                    opacity: 0,
+                                    transform: "translateY(15px)"
+                                },
+                                {
+                                    opacity: 1,
+                                    transform: "translateY(0)"
+                                }
+                            ],
+                            {
+                                duration: 350,
+                                easing: "ease-out"
+                            }
+                        );
+
+                    }
+
+                }
+
+            });
+
+        });
+
+    });
+
+    /* =================================
+       コピーライトの自動更新
+       ================================= */
+
     if (year) {
+
         year.textContent = new Date().getFullYear();
+
     }
 
-    console.log("CAFE NOIR - Website initialized.");
+    console.log("LUMIÈRE SALON - Website initialized.");
 
 });
