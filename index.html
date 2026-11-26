@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CAFE NOIR - こだわりのコーヒーと上質な空間を楽しむカフェ。">
+    <title>CAFE NOIR | Premium Coffee Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header" id="header">
+        <a href="#home" class="logo">CAFE<span> NOIR</span></a>
+
+        <nav class="nav" id="nav">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#menu">MENU</a>
+            <a href="#gallery">GALLERY</a>
+            <a href="#access">ACCESS</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle"
+            aria-label="メニューを開く"
+            aria-controls="nav"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- メインビジュアル -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="eyebrow">EST. 2026 — PREMIUM COFFEE</p>
+
+                <h1>Beyond<br>Ordinary Coffee.</h1>
+
+                <p class="hero-description">
+                    日常を忘れる、特別な一杯。<br>
+                    上質な空間で、心ほどけるひとときを。
+                </p>
+
+                <a href="#menu" class="btn">EXPLORE MENU</a>
+            </div>
+
+            <a href="#about" class="scroll-indicator">
+                SCROLL DOWN
+                <span></span>
+            </a>
+        </section>
+
+        <!-- 店舗紹介 -->
+        <section class="about section" id="about">
+
+            <div class="about-image reveal">
+                <img src="images/about.jpg" alt="コーヒーを淹れる様子" loading="lazy">
+            </div>
+
+            <div class="about-content reveal">
+                <p class="eyebrow">OUR STORY</p>
+
+                <h2>Crafted with<br>Passion.</h2>
+
+                <p>
+                    厳選されたコーヒー豆と、丁寧なハンドドリップ。
+                    一杯一杯にこだわりを込めています。
+                </p>
+
+                <p>
+                    落ち着いた空間と豊かな香りに包まれながら、
+                    あなただけの特別な時間をお過ごしください。
+                </p>
+
+                <a href="#access" class="text-link">
+                    VISIT OUR CAFE →
+                </a>
+            </div>
+
+        </section>
+
+        <!-- メニュー -->
+        <section class="menu-section section" id="menu">
+
+            <div class="section-heading reveal">
+                <p class="eyebrow">SIGNATURE SELECTION</p>
+                <h2>Our Menu</h2>
+                <p>厳選された、こだわりのメニュー。</p>
+            </div>
+
+            <div class="menu-grid">
+
+                <article class="menu-card reveal">
+                    <img src="images/espresso.jpg" alt="エスプレッソ" loading="lazy">
+                    <div class="menu-info">
+                        <p class="category">COFFEE</p>
+                        <h3>Espresso</h3>
+                        <p>深いコクと豊かな香り。</p>
+                        <span class="price">¥450</span>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <img src="images/latte.jpg" alt="カフェラテ" loading="lazy">
+                    <div class="menu-info">
+                        <p class="category">COFFEE</p>
+                        <h3>Cafe Latte</h3>
+                        <p>なめらかなミルクとエスプレッソ。</p>
+                        <span class="price">¥580</span>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <img src="images/cappuccino.jpg" alt="カプチーノ" loading="lazy">
+                    <div class="menu-info">
+                        <p class="category">COFFEE</p>
+                        <h3>Cappuccino</h3>
+                        <p>ふんわりとしたミルクフォーム。</p>
+                        <span class="price">¥600</span>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <img src="images/cheesecake.jpg" alt="チーズケーキ" loading="lazy">
+                    <div class="menu-info">
+                        <p class="category">DESSERT</p>
+                        <h3>Cheesecake</h3>
+                        <p>濃厚で上品な味わい。</p>
+                        <span class="price">¥650</span>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <img src="images/croissant.jpg" alt="クロワッサン" loading="lazy">
+                    <div class="menu-info">
+                        <p class="category">FOOD</p>
+                        <h3>Croissant</h3>
+                        <p>香ばしく、サクサクの食感。</p>
+                        <span class="price">¥420</span>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal">
+                    <img src="images/matcha.jpg" alt="抹茶ラテ" loading="lazy">
+                    <div class="menu-info">
+                        <p class="category">DRINK</p>
+                        <h3>Matcha Latte</h3>
+                        <p>上質な抹茶とミルクの調和。</p>
+                        <span class="price">¥620</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ギャラリー -->
+        <section class="gallery section" id="gallery">
+
+            <div class="section-heading reveal">
+                <p class="eyebrow">THE ATMOSPHERE</p>
+                <h2>Gallery</h2>
+                <p>日常から少し離れた、心地よい空間。</p>
+            </div>
+
+            <div class="gallery-grid reveal">
+                <img src="images/gallery1.jpg" alt="カフェの店内" loading="lazy">
+                <img src="images/gallery2.jpg" alt="コーヒーカップ" loading="lazy">
+                <img src="images/gallery3.jpg" alt="カフェの座席" loading="lazy">
+                <img src="images/gallery4.jpg" alt="コーヒー豆" loading="lazy">
+            </div>
+
+        </section>
+
+        <!-- 店舗情報 -->
+        <section class="access section" id="access">
+
+            <div class="section-heading reveal">
+                <p class="eyebrow">FIND US</p>
+                <h2>Visit Our Cafe</h2>
+            </div>
+
+            <div class="access-grid">
+
+                <div class="access-card reveal">
+                    <h3>LOCATION</h3>
+                    <p>東京都〇〇区〇〇 1-2-3</p>
+                </div>
+
+                <div class="access-card reveal">
+                    <h3>OPENING HOURS</h3>
+                    <p>平日 10:00 - 20:00</p>
+                    <p>土日 09:00 - 21:00</p>
+                </div>
+
+                <div class="access-card reveal">
+                    <h3>CONTACT</h3>
+                    <p>03-XXXX-XXXX</p>
+                    <p>contact@example.com</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <a href="#home" class="logo">CAFE<span> NOIR</span></a>
+
+        <p>Experience the art of coffee.</p>
+
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#menu">MENU</a>
+            <a href="#access">ACCESS</a>
+        </nav>
+
+        <p class="copyright">
+            &copy; <span id="year">2026</span> CAFE NOIR. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- ページ上部に戻るボタン -->
+    <button class="back-to-top" id="backToTop"
+        aria-label="ページ上部へ戻る">
+        ↑
+    </button>
+
+<!-- プレビュー専用バナー -->
+<div class="preview-banner">
+    <span>PREVIEW VERSION</span>
+    <p>CAFE NOIR — Website Template</p>
+    <a href="https://koma-studio.booth.pm/items/9227009"
+       target="_blank"
+       rel="noopener noreferrer">
+        テンプレートを購入 →
+    </a>
+</div>
+
+</body>
+</html>
